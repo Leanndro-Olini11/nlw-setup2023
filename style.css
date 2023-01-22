@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --color-background: #1E1E1E;
+    --button-font: 'Inter', sans-serif;
+    --table-font: 'Roboto', sans-serif;
+    --color-violet: #8B5CF6;
+    --color-background-input: #18181B;
+    --color-border-input: #27272A;
+    --color-border-checked: #A78BFA;
+}
+
+body {
+    background-color: var(--color-background);
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 48px;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+}
+img {
+    width: 150.21px;
+    height: 84px;
+}
+button {
+    border-color: var(--color-violet);
+    background: none;
+    color: white;
+    border-radius: 8px;
+    padding: 16px 24px;
+    display: flex;
+    gap: 12px;
+    text-align: center;
+    font-family: var(--button-font);
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 125%;
+    cursor: pointer;
+}
+form {
+    display: flex;
+    padding: 182px 48px 48px;
+    width: fit-content;
+}
+.habits {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 64px;
+    display: flex;
+    gap: 24px;
+    flex-direction: column;
+    margin-top: 60px;
+}
+.days {
+    display: flex;
+    gap: 48px;
+    margin-left: 32px;
+}
+.day {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+}
+.days{
+    font-weight: var(--table-font);
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 125%;
+    color: #A1A1AA;
+    margin-bottom: 8px;
+}
+input {
+    /*por padrão o input chechbox não aceite todos os atributos entao deve-se a linha 
+    duas linhas abaixo adicionar o padrão e podendo utilizar todas as funcionalidades*/
+    appearance: none;
+    -webkit-appearance: none;
+    background: var(--color-background-input);
+    border: 2px solid var(--color-border-input);
+    border-radius: 8px;
+    width: 64px;
+    height: 64px;
+}
+input:checked {
+    border: 2px solid var(--color-border-checked);
+    background: var(--color-violet);
+}
+/*responsividade do button de registro no header*/
+@media(max-width: 570px) {
+    button div {
+        display: none;
+    }
+}
